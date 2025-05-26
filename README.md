@@ -11,3 +11,7 @@
     -couro
 - 18% de defeitos da produção mensal
 - Números de homens/hora => 44 horas/8 homens
+- Quem terá acesso ao admin?
+  - chefe
+  - pcp
+  - 2 gerentes de linha
