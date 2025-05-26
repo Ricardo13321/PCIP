@@ -1,6 +1,6 @@
 # PCIP
 <h2>Painel de Controle de Produção (Simplificado)</h2>
-<hr>
+
 <h3>Industria de sapatos</h3>
 
 - Produção => 1000 pares de sapatos por partoda (modelo de sapatos). 
