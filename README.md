@@ -15,3 +15,9 @@
   - chefe
   - pcp
   - 2 gerentes de linha
+
+<hr>
+
+- login
+- dashboard admin
+- listagem diaria dos funcionários/cadastro de refugo e tempo de produção
