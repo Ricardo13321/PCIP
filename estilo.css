@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.navmenu {
+    background: #f2f2f2;
+}
+
+.menutopo {
+    height: 10vh;
+}
+
+.h-85 {
+    height: 85%;
+}
+
+.h-15 {
+    height: 15%;
+}
