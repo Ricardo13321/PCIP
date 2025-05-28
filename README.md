@@ -1,8 +1,7 @@
 # PCIP
-Painel de Controle de Produção (Simplificado)
+<h2>Painel de Controle de Produção (Simplificado)</h2>
 
-
-Industria de sapatos
+<h3>Industria de sapatos</h3>
 
 - Produção => 1000 pares de sapatos por partoda (modelo de sapatos). 
   -  E produz 1000 => semana de segunda à sábado, durante quatro semanas.
@@ -12,3 +11,13 @@ Industria de sapatos
     -couro
 - 18% de defeitos da produção mensal
 - Números de homens/hora => 44 horas/8 homens
+- Quem terá acesso ao admin?
+  - chefe
+  - pcp
+  - 2 gerentes de linha
+
+<hr>
+
+- login
+- dashboard admin
+- listagem diaria dos funcionários/cadastro de refugo e tempo de produção
