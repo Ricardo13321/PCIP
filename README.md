@@ -23,4 +23,4 @@
 - listagem diaria dos funcionários/cadastro de refugo e tempo de produção
 
 
-<img href="https://metricalist.com/wp-content/uploads/2023/04/Ecommerce%20Sales%20Dashboard.PNG">
+<img src="https://metricalist.com/wp-content/uploads/2023/04/Ecommerce%20Sales%20Dashboard.PNG">
