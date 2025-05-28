@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+.navmenu {
+    background: #f2f2f2;
+}
+
+.menutopo {
+    height: 10vh;
+    background:rgb(150, 64, 29)
+}
+
+.h-85 {
+    height: 85%;
+}
+
+.h-15 {
+    height: 15%;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    div {
+        background: pink;
+    }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+ }
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    
+ }
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    
+ }
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+    
+}

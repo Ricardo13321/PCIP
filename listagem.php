@@ -10,95 +10,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <title>LISTAGEM</title>
     <link rel="icon" type="image/x-icon" href="caticon.png">
+    <link type="text/css" rel="stylesheet" href="estilo.css">
 </head>
-<style>
-    body{
-        background-color: whitesmoke;
-    }
-
-    .card-header {
-        color:rgb(100, 0, 131);
-    }
-
-    .btn-purple {
-            background: rgb(207, 48, 255);
-            color: black;   
-    }
-    .btn-purple:hover {
-            border: 1px solid rgb(207, 48, 255);
-            background: rgb(100, 0, 131);
-            font-style: none;
-            color: black;
-    }
-
-    .btn-purple:active {
-        border: 1px solid rgb(207, 48, 255);
-        background: rgb(67, 1, 87);
-        font-style: none;
-        color: black;
-    }
-
-    nav a {
-        color: black;
-        text-decoration: none;
-    }
-
-    .user {
-        float: right;
-        margin-right: 10px;
-    }
-</style>
-<body class="fundobonitinho">
-    <div style="display: flex;">
-        <div class="input-group" style="justify-content: center;" >
-            <div class="input-group-text">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-            </div>
-            
-        </div>
+<body>
+    <div class="menutopo d-flex align-items-center shadow-lg h-15"">
+        <h2 class="m-auto" ><b>MENU INICIAL PCIP</b></h2>
     </div>
-        
-    <br><br>
-    <div class="row justify-content-center row-cols-1 row-cols-md-2 text-center">
-        <div class="cols">
-            <div class="card mb-4 rounded shadow-sw">
-                <div class="card-header py-3 d-flex justify-content-between">
-                    <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
-                    <input type="search" id="pesquisar" placeholder="Pesquisar">
-                </div>
-                <?php include "lista.php"; ?>
-
-                <div class="card-footer">
-                    <form class="row row-cols-lg-auto d-flex">
-                        <div class="col-12">
-                            <input class="form-control" type="text" name="Nome" placeholder="Nome" required>
-                        </div>
-                        <div>
-                            <select class="form-select" id="floatingSelect" aria-label="modelo" name="modelo" required>
-                                    <option selected disabled>Modelo</option>
-                                    <option value="Modelo1">Modelo1</option>
-                                    <option value="Modelo2">Modelo2</option>
-                                    <option value="Modelo3">Modelo3</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select class="form-select" id="floatingSelect" aria-label="estado" name="estado" required>
-                                    <option selected disabled>Estado</option>
-                                    <option value="Modelo1">Perfeito</option>
-                                    <option value="Modelo2">Defeito</option>
-                                    <option value="Modelo3">Perda</option>
-                            </select>
-                        </div>
-                        <div class="float-end">
-                            <input class="btn btn-success" type="submit" value="Salvar">
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="d-flex  h-85">
+        <div  class="d-flex shadow-lg navmenu">
+            <?php include "menunav.html" ?>
         </div>
+        <div class="w-100 h-85">
+            <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
+                <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
+                <input type="search" id="pesquisar" placeholder="Pesquisar">
+            </div> 
+            <div style="overflow: auto;" class="h-85">         
+                <table class="table table-bordered h-auto">
+                    <tbody id="table">
+                        <tr>
+                            <th>Funcionário</th>
+                            <th>Modelo</th>
+                            <th>Estado</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                        </tr>
+                        <div>
+                            <?php include "lista.html"; ?>
+                        </div>
+                    </tbody>
+                </table>
+            </div>
+            <div class="h-auto" style="background: whitesmoke;">
+                <form class="row row-cols-lg-auto d-flex m-0 p-3">
+                    <div class="col-12">
+                        <input class="form-control" type="text" name="Nome" placeholder="Nome" required>
+                    </div>
+                    <div>
+                        <select class="form-select" id="floatingSelect" aria-label="modelo" name="modelo" required>
+                                <option selected disabled>Modelo</option>
+                                <option value="Modelo1">Modelo1</option>
+                                <option value="Modelo2">Modelo2</option>
+                                <option value="Modelo3">Modelo3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select" id="floatingSelect" aria-label="estado" name="estado" required>
+                                <option selected disabled>Estado</option>
+                                <option value="Modelo1">Perfeito</option>
+                                <option value="Modelo2">Defeito</option>
+                                <option value="Modelo3">Perda</option>
+                        </select>
+                    </div>
+                    <div class="float-end">
+                        <input class="btn btn-success" type="submit" value="Salvar">
+                    </div>
+                </form>
+            </div>
+        </div>        
     </div>
+
+
     <!-- Modal EDITAR-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
