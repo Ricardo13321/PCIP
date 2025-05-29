@@ -16,10 +16,8 @@
     <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
         <h2 class="m-auto" ><b>MENU INICIAL PCIP</b></h2>
     </div>
-    <div class="d-flex  h-85">
-        <div  class="d-flex shadow-lg navmenu">
+    <div class="d-xl-flex  h-85">
             <?php include "menunav.html" ?>
-        </div>
         <div class="w-100 h-85">
             <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
                 <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
@@ -38,9 +36,9 @@
                     <div>
                         <input type="search" id="pesquisar" placeholder="Pesquisar">
                     </div>
-                    <div>
-                        <input data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" value="CADASTRAR">
-                        <a href="#"><input type="button" value="SALVAR"></a>
+                    <div class="d-flex flex-column flex-xxl-row">
+                        <b><input class="m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
+                        <a href="#"><input class="m-1" type="button" value="SALVAR"></a>
                     </div>
                 </div>
                 
