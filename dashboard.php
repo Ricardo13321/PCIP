@@ -54,9 +54,17 @@
         <div class="w-100">
             <div class="text-center">
                 <nav class="navbar">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav d-flex flex-row">
                         <li class="nav-item">
-                            <input type="date" value="25/05/2025">
+                            <labe>Data inicial: </labe>
+                            <input type="date" data-format="00/00/0000"  value="<?php echo date("Y"); ?>-<?php echo date("m"); ?>-<?php echo date("d") ?>">
+                        </li>
+                        <li>
+                            <label>Data final: </label>
+                            <input type="date" data-format="00/00/0000"  value="<?php echo date("Y"); ?>-<?php echo date("m"); ?>-01">
+                        </li>
+                        <li>
+                            <input type="button" value="Imprimir";
                         </li>
                     </ul>
                 </nav>
