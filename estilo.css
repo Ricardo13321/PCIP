@@ -34,13 +34,14 @@ li {
     height: 15%;
 }
 
-.col {
-    border: 1px solid red;
-}
-
+.col{
+    border: 2px solid rgba(122, 122, 122, 0.815);
+} 
 /* `sm` applies to x-small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
-
+    div {
+        background: pink;
+    }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
