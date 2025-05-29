@@ -25,7 +25,7 @@
                 <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
                 <input type="search" id="pesquisar" placeholder="Pesquisar">
             </div> 
-            <div style="overflow: auto;" class="h-85">         
+            <div style="overflow: auto;" class="">         
                 <table class="table table-bordered h-auto">
                     <tbody id="table">
                         <tr>
@@ -42,7 +42,7 @@
                 </table>
             </div>
             <div class="h-auto" style="background: whitesmoke;">
-                <form class="row row-cols-lg-auto d-flex m-0 p-3">
+                <form class="row row-cols-sm-auto d-flex m-0 p-0 h-100">
                     <div class="col-12">
                         <input class="form-control" type="text" name="Nome" placeholder="Nome" required>
                     </div>
@@ -69,8 +69,6 @@
             </div>
         </div>        
     </div>
-
-
     <!-- Modal EDITAR-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
