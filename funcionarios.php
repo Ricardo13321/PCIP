@@ -22,19 +22,8 @@
         </div>
         <div class="w-100 h-85">
             <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
-                <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
+                <strong><h3>LISTAGEM DE FUNCIONÁRIOS</h3></strong>
                 <div class="row row-cols-sm-auto d-flex m-0 p-0 h-100">
-                    <div>
-                        Filtrar por:
-                        <div>
-                            <input type="checkbox" name="filtro">
-                            <label>Funcionário</label>
-                            <input type="checkbox" name="filtro">
-                            <label>Modelo</label>
-                            <input type="checkbox" name="filtro">
-                            <label>Estado</label>
-                        </div>
-                    </div>
                     <div>
                         <input type="search" id="pesquisar" placeholder="Pesquisar">
                     </div>
@@ -50,8 +39,8 @@
                     <tbody id="table">
                         <tr>
                             <th>Funcionário</th>
-                            <th>Modelo</th>
-                            <th>Estado</th>
+                            <th>Produção</th>
+                            <th>Perda</th>
                             <th>Data</th>
                             <th>Hora</th>
                         </tr>
@@ -94,8 +83,8 @@
                             </select>
                         </div>
                         <div class="float-end">
-                            <input  type="submit" value="Salvar">
-                            <input type="button" data-bs-dismiss="modal" value="Cancelar">
+                            <input class="btn btn-success" type="submit" value="Salvar">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
                         </div>
                     </form>
                 </div>
