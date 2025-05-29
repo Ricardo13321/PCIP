@@ -27,6 +27,6 @@
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 100%; height: 100%; background-color:rgb(192, 192, 192);"></div>
+    <div id="piechart"></div>
   </body>
 </html>

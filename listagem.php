@@ -76,7 +76,7 @@
                         <div class="mb-3">
                             <label class="form-label">Modelo</label>
                             <select class="form-select" id="floatingSelect" aria-label="modelo" name="modelo" required>
-                                    <option selected disabled>Modelo</option>
+                                    <option selected disabled>Selecione</option>
                                     <option value="Modelo1">Modelo1</option>
                                     <option value="Modelo2">Modelo2</option>
                                     <option value="Modelo3">Modelo3</option>
@@ -85,9 +85,10 @@
                         <div class="mb-3">
                             <label class="form-label">Estado</label>
                             <select class="form-select" id="floatingSelect" aria-label="estado" name="estado" required>
-                                    <option selected disabled>Estado</option>
+                                    <option selected disabled>Selecione</option>
                                     <option value="Perfeito">Perfeito</option>
-                                    <option value="Defeito">Defeito</option>
+                                    <option value="Defeito couro">Defeito couro</option>
+                                    <option value="Defeito cola">Defeito cola</option>
                                     <option value="Perda">Perda</option>
                             </select>
                         </div>
