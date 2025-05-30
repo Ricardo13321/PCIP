@@ -27,12 +27,7 @@
                     <div>
                         <input type="search" id="pesquisar" placeholder="Pesquisar">
                     </div>
-                    <div>
-                        <input data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" value="CADASTRAR">
-                        <a href="#"><input type="button" value="SALVAR"></a>
-                    </div>
                 </div>
-                
             </div> 
             <div class="overflow-auto" style="height: 90%; background: white;">         
                 <table class="table table-bordered">
@@ -42,7 +37,7 @@
                             <th>Produção</th>
                             <th>Perda</th>
                             <th>Data</th>
-                            <th>Hora</th>
+                            <th>Horas trabalhada</th>
                         </tr>
                         <?php include "lista.html"; ?>
                     </tbody>
@@ -52,44 +47,6 @@
                 
             </div>
         </div>        
-    </div>
-
-    <!-- Modal CADASTRAR-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fs-5" id="exampleModalLabel">CADASTRAR ENTREGA</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="form" class="modal-body text-start">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Modelo</label>
-                            <select class="form-select" id="floatingSelect" aria-label="modelo" name="modelo" required>
-                                    <option selected disabled>Modelo</option>
-                                    <option value="Modelo1">Modelo1</option>
-                                    <option value="Modelo2">Modelo2</option>
-                                    <option value="Modelo3">Modelo3</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Estado</label>
-                            <select class="form-select" id="floatingSelect" aria-label="estado" name="estado" required>
-                                    <option selected disabled>Estado</option>
-                                    <option value="Perfeito">Perfeito</option>
-                                    <option value="Defeito">Defeito</option>
-                                    <option value="Perda">Perda</option>
-                            </select>
-                        </div>
-                        <div class="float-end">
-                            <input class="btn btn-success" type="submit" value="Salvar">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
