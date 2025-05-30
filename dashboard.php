@@ -45,76 +45,59 @@
 
 <body class="p-0 m-0 border-0 bd-example m-0 border-0 bd-example-cssgrid">
     <div class="menutopo d-flex align-items-center h-15 bg-primary text-white">
-        <h2 class="m-auto"><b>MENU INICIAL PCIP</b></h2>
+        <h2 class="m-auto" ><b>MENU INICIAL PCIP</b></h2>
     </div>
     <div class="d-flex  h-85">
         <div class="d-flex navmenu">
             <?php include "menunav.html" ?>
         </div>
-        <div class="w-100">
-            <div class="text-center">
-                <nav class="navbar">
-                    <ul class="navbar-nav d-flex flex-row">
-                        <li class="nav-item">
-                            <labe>Data inicial: </labe>
-                            <input type="date" data-format="00/00/0000"  value="<?php echo date("Y"); ?>-<?php echo date("m"); ?>-<?php echo date("d") ?>">
-                        </li>
-                        <li>
-                            <label>Data final: </label>
-                            <input type="date" data-format="00/00/0000"  value="<?php echo date("Y"); ?>-<?php echo date("m"); ?>-01">
-                        </li>
-                        <li>
-                            <input type="button" value="Imprimir";
-                        </li>
-                    </ul>
-                </nav>
-                <div class="row">
-                    <div class="col" style="height: 240;">
-                        <div class="p-1 m-2 grafico">
-                            <?php include "grafico1.php" ?>
-                        </div>
-                    </div>
-                    <div class="col" style="height: 240;">
-                        <div class="p-1 m-2 grafico">
-                            <?php include "grafico2.php" ?>
-                        </div>
-                    </div>
-                    <div class="col" style="height: 240;">
-                        <div class="p-1 m-2 grafico">
-                            <?php include "grafico3.php" ?>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-1 m-2 grafico">
-                            <?php include "grafico4.php" ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="p-1 m-2 grafico">
-                            <?php include "grafico5.php" ?>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-1 m-2 grafico">
-                            graf6
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="p-1 m-2 grafico">
-                            graf7
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-1 m-2 grafico">
-                            graf8
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="w-100">      
+    <div class="text-center">
+  <div class="row">
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      asddsa
+        </div>
+    </div>
+    <div class="col">
+      <div class="p-1 m-2 grafico">
+      asdda
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col">
+     <div class="p-1 m-2 grafico">
+       <?php include "grafico5.php"?>
+        </div>
+    </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+        <?php include "graficod.php"?>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico1.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico2.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+     <?php include "grafico3.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico4.php"?>
+        </div>
+    </div>
+</div>  
 </body>
-
 </html>

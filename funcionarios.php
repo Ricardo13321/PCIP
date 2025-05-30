@@ -28,7 +28,6 @@
                         <input type="search" id="pesquisar" placeholder="Pesquisar">
                     </div>
                 </div>
-                
             </div> 
             <div class="overflow-auto" style="height: 90%; background: white;">         
                 <table class="table table-bordered">
