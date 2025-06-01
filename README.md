@@ -26,10 +26,13 @@
 <hr>
 
 <h2>Tipos de dados</h2>
-- Produção
-- Refugo por cola
-- Refugo por couro
-- Perda
+
+- Produção Total
+- Produto Final
+- Refugo
+  - Cola
+  - Couro
+- Descarte
 - Funcionários
 - Dia
 - Horas
