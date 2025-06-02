@@ -26,6 +26,16 @@
           interpolateNulls: false,
         };
 
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0,1,
+            {
+              calc: "stringify",
+              sourceColumn: 2,
+              type: "string",
+              role: "annotation" 
+            }
+        ]);
+
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }

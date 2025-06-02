@@ -14,11 +14,6 @@
     .card{
         border: none;
     }
-
-    .card-header {
-        background: white;
-        border-bottom: 1px solid gray;
-    }
 </style>
 <body>
     <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
@@ -78,7 +73,7 @@
                                             <h6>TOTAL PRODUZIDO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <h6>875</h6>
+                                            <b><span><h1>875</h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +85,7 @@
                                             <h6>RETRABALHO COLA</h6>
                                         </div>
                                         <div class="card-body">
-                                            <h6>56</h6>
+                                            <b><span><h1>56</h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +97,7 @@
                                             <h6>RETRABALHO COURO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <h6>45</h6>
+                                            <b><span><h1>45</h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +109,7 @@
                                             <h6>REFUGO/PERDAS</h6>
                                         </div>
                                         <div class="card-body">
-                                            <h6>102</h6>
+                                            <b><span><h1>102</h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +133,7 @@
                                         <div class="card-header">
                                             <h6>RETRABALHO</h6>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body d-flex justify-content-center">
                                             <?php include "graficoretrabalho.php" ?>
                                         </div>
                                     </div>
