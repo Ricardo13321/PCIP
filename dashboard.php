@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
-        <h2 class="m-auto"><b>MENU INICIAL PCIP</b></h2>
+        <h2 class="m-auto"><b>DASHBOARD</b></h2>
     </div>
     <div class="d-flex h-90 w-100 align-items-stretch">
         <div class="d-flex navmenu">
