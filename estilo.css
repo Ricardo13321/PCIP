@@ -1,6 +1,11 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    
     height: 100vh;
+    background: whitesmoke;
 }
 
 a {
@@ -21,8 +26,8 @@ li {
     background: #f2f2f2;
 }
 
-.menutopo {
-    height: 10vh;
+.h-90 {
+    height: 90%;
 }
 
 .h-85 {
@@ -31,6 +36,10 @@ li {
 
 .h-15 {
     height: 15%;
+}
+
+.h-10 {
+    height: 10%;
 }
 
 .grafico {
@@ -54,8 +63,10 @@ li {
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) { 
-
- }
+    .menutopo {
+        display: none;
+    }
+}
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) { 
