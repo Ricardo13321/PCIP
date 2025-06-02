@@ -12,7 +12,7 @@ $descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Funcionário", "Produto Final", "Refugo", "Perda"],
+          ["Funcionário", "Produto Final", "Refugo", "Defeito"],
           <?php
           for ($i = 0; $i < count($nomes); $i++) {
             echo '["'.$nomes[$i].'", '.$produto_final[$i].', '.$refugo[$i].', '.$descarte[$i].'],';
@@ -21,9 +21,9 @@ $descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
         ]);
 
         var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
+        view.setColumns([0, 1, 
                           { calc: "stringify",
-                          sourceColumn: 1,
+                          sourceColumn: 2,
                           type: "string",
                           role: "annotation" },
                           2,
