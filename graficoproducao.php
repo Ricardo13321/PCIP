@@ -4,30 +4,27 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
+
         var data = google.visualization.arrayToDataTable([
-          ['Pac Man', 'Percentage'],
-          ['', 75],
-          ['', 25]
+          ['Task', 'Hours per Day'],
+          ['Produção',     11],
+          ['Perda',      2],
+          ['Refugo',  2]
         ]);
 
         var options = {
-          legend: 'none',
-          pieSliceText: 'none',
-          pieStartAngle: 135,
-          tooltip: { trigger: 'none' },
-          slices: {
-            0: { color: 'yellow' },
-            1: { color: 'transparent' }
-          }
+          legend: {position: 'top', maxLines: '3'}
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('pacman'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
-    <div id="pacman"></div>
+    <div id="piechart"></div>
   </body>
 </html>
