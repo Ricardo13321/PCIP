@@ -22,17 +22,3 @@
 - dashboard admin
 - listagem diaria dos funcionários/cadastro de refugo e tempo de produção
 <img src="https://metricalist.com/wp-content/uploads/2023/04/Ecommerce%20Sales%20Dashboard.PNG">
-
-<hr>
-
-<h2>Tipos de dados</h2>
-
-- Produção Total
-- Produto Final
-- Refugo
-  - Cola
-  - Couro
-- Descarte
-- Funcionários
-- Dia
-- Horas
