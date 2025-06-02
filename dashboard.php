@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,139 +12,92 @@
     <link type="text/css" rel="stylesheet" href="estilo.css">
 </head>
 <style>
-    .card{
-        border: none;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .navmenu {
+        background: #f2f2f2;
+    }
+
+    .menutopo {
+        height: 10vh;
+    }
+
+    .h-85 {
+        height: 85%;
+    }
+
+    .h-15 {
+        height: 15%;
     }
 </style>
-<body>
-    <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
-        <h2 class="m-auto"><b>GERENCIAMENTO DE PRODUÇÃO</b></h2>
+
+<body class="p-0 m-0 border-0 bd-example m-0 border-0 bd-example-cssgrid">
+    <div class="menutopo d-flex align-items-center h-15 bg-primary text-white">
+        <h2 class="m-auto" ><b>MENU INICIAL PCIP</b></h2>
     </div>
-    <div class="d-flex h-90 w-100 align-items-stretch">
+    <div class="d-flex  h-85">
         <div class="d-flex navmenu">
             <?php include "menunav.html" ?>
         </div>
-        <div style="overflow-x: hidden; overflow-y: auto;" class=" h-auto w-100">
-            <div class="text-center">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <nav class="navbar">
-                            
-                        </nav>
-                    </div>
-                <div class="row g-0">
-                    <div class="col-xl-9">
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>PERFORMANCE</h6>
-                                </div>
-                                <div class="card-body">
-                                    <?php include "graficoperformance.php" ?><hr>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>META SEMANAL</h6>
-                                </div>
-                                <div class="card-body">
-                                    <?php include "graficometa.php" ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>PRODUÇÃO POR FUNCIONÁRIO</h6>
-                                </div>
-                                <div class="card-body">
-                                    <?php include "graficoprodfuncionarios.php" ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="row g-0">
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>TOTAL PRODUZIDO</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1>875</h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>RETRABALHO COLA</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1>56</h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>RETRABALHO COURO</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1>45</h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>REFUGO/PERDAS</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1>102</h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>PRODUÇÃO</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <?php include "graficoproducao.php" ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>RETRABALHO</h6>
-                                        </div>
-                                        <div class="card-body d-flex justify-content-center">
-                                            <?php include "graficoretrabalho.php" ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
+        <div class="w-100">      
+    <div class="text-center">
+  <div class="row">
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      asddsa
         </div>
     </div>
+    <div class="col">
+      <div class="p-1 m-2 grafico">
+      asdda
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col">
+     <div class="p-1 m-2 grafico">
+       <?php include "grafico5.php"?>
+        </div>
+    </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+        <?php include "graficod.php"?>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico1.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico2.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+     <?php include "grafico3.php"?>
+        </div>
+        </div>
+    <div class="col">
+     <div class="p-1 m-2 grafico">
+      <?php include "grafico4.php"?>
+        </div>
+    </div>
+</div>  
 </body>
 </html>

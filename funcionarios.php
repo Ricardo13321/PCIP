@@ -8,13 +8,13 @@
     <meta http-equiv="content-language" content="pt-br">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <title>FUNCIONÁRIOS</title>
+    <title>LISTAGEM</title>
     <link rel="icon" type="image/x-icon" href="caticon.png">
     <link type="text/css" rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
-        <h2 class="m-auto" ><b>FUNCIONÁRIOS</b></h2>
+        <h2 class="m-auto" ><b>MENU INICIAL PCIP</b></h2>
     </div>
     <div class="d-flex  h-85">
         <div  class="d-flex shadow-lg navmenu">
