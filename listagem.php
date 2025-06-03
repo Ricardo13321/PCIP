@@ -1,4 +1,9 @@
+<?php 
+session_start();
+?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -65,21 +70,23 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="form" class="modal-body text-start">
-                    <form>
+                    <form method="get" action="cadastrarentrega.php">
+                        <div class="mb-3"> 
+                            <label class="form-label">Quantidade</label>
+                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="quantidade">
+                        </div>
                         <div class="mb-3">
-                            <label class="form-label">Modelo</label>
-                            <select class="form-select" id="floatingSelect" aria-label="modelo" name="modelo" required>
+                            <label class="form-label">Código</label>
+                            <select class="form-select" id="floatingSelect" aria-label="codigo" name="codigo" required>
                                     <option selected disabled>Selecione</option>
-                                    <option value="Modelo1">Modelo1</option>
-                                    <option value="Modelo2">Modelo2</option>
-                                    <option value="Modelo3">Modelo3</option>
+                                    <option value="31351">31351</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Estado</label>
-                            <select class="form-select" id="floatingSelect" aria-label="estado" name="estado" required>
+                            <select class="form-select" id="floatingSelect" aria-label="condicao" name="estado" required>
                                     <option selected disabled>Selecione</option>
-                                    <option value="Perfeito">Perfeito</option>
+                                    <option value="Produto final">Produto final</option>
                                     <option value="Defeito couro">Defeito couro</option>
                                     <option value="Defeito cola">Defeito cola</option>
                                     <option value="Perda">Perda</option>
