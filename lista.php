@@ -1,11 +1,20 @@
 <?php
+
 date_default_timezone_set('America/Sao_Paulo');
 
-$nome = "Juan";
-$codigo = "32483";
-$quantidade = "30";
-$modelo = "Social";
-$status= "Produto final";
+$filecodigo = file_get_contents("codigo.json");
+$filequantidade = file_get_contents("quantidade.json");
+$fileestado = file_get_contents("estado.json");
+$filenome = file_get_contents("nome_entrega.json");
+$filedate = file_get_contents("date.json");
+$filehora = file_get_contents("hora.json");
+
+$_SESSION['codigo'] = json_decode($filecodigo, true);
+$_SESSION['quantidade'] = json_decode($filequantidade, true);
+$_SESSION['estado'] = json_decode($fileestado, true);
+$_SESSION['nome'] = json_decode($filenome, true);
+$_SESSION['date'] = json_decode($filedate, true);
+$_SESSION['hora'] = json_decode($filehora, true);
 
 echo "
 <tr>
@@ -19,16 +28,16 @@ echo "
 </tr>
 ";
 
-for ($i = 0; $i < 30; $i++) {
+for ($i = 0; $i < count($_SESSION['nome']); $i++) {
     echo "
         <tr>
-            <td>$nome</td>
-            <td>$codigo</td>
-            <td>$quantidade</td>
-            <td>$modelo</td>
-            <td>$status</td>
-            <td>" . date("d") . "/" . date("m") . "/" . date("Y") . "</td>
-            <td>" . date("H:i:s") . "</td>
+            <td>".$_SESSION['nome'][$i]."</td>
+            <td>".$_SESSION['codigo'][$i]."</td>
+            <td>".$_SESSION['quantidade'][$i]."</td>
+            <td>Bota</td>
+            <td>".$_SESSION['estado'][$i]."</td>
+            <td>".$_SESSION['date'][$i]."</td>
+            <td>".$_SESSION['hora'][$i]."</td>
         </tr>
     ";
 }
