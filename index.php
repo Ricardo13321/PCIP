@@ -16,11 +16,11 @@
 </style>
 <body class="d-flex justify-content-center align-items-center">
     <div class="col-2">
-        <form method="POST" action="inicial.php">
+        <form method="POST" action="autenticacao.php">
             <label class="form-label">Usuário</label>
-            <input class="form-control mb-3" type="email" autofocus required placeholder="Escreva o seu usuário">
+            <input class="form-control mb-3" name="usuario" type="text" autofocus required placeholder="Escreva o seu usuário">
             <label class="form-label">Senha</label>
-            <input class="form-control mb-3" type="password" required placeholder="Escreva a sua senha">
+            <input class="form-control mb-3" name="senha" type="password" required placeholder="Escreva a sua senha">
             <input class="float-end" type="submit" value="Entrar">
         </form>
     </div>
