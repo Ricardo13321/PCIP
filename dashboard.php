@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +16,7 @@
     <title>DASHBOARD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <link type="text/css" rel="stylesheet" href="estilo.css">
+    <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <style>
     .card{
@@ -21,7 +29,7 @@
     </div>
     <div class="d-flex h-90 w-100 align-items-stretch">
         <div class="d-flex navmenu">
-            <?php include "menunav.html" ?>
+            <?php include "view/menunav.php" ?>
         </div>
         <div style="overflow-x: hidden; overflow-y: auto;" class=" h-auto w-100">
             <div class="text-center">
@@ -39,7 +47,7 @@
                                     <h6>PERFORMANCE</h6>
                                 </div>
                                 <div class="card-body">
-                                    <?php include "graficoperformance.php" ?><hr>
+                                    <?php include "graficos/graficoperformance.php" ?><hr>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +57,7 @@
                                     <h6>META SEMANAL</h6>
                                 </div>
                                 <div class="card-body">
-                                    <?php include "graficometa.php" ?>
+                                    <?php include "graficos/graficometa.php" ?>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +67,7 @@
                                     <h6>PRODUÇÃO POR FUNCIONÁRIO</h6>
                                 </div>
                                 <div class="card-body">
-                                    <?php include "graficoprodfuncionarios.php" ?>
+                                    <?php include "graficos/graficoprodfuncionarios.php" ?>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +130,7 @@
                                             <h6>PRODUÇÃO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <?php include "graficoproducao.php" ?>
+                                            <?php include "graficos/graficoproducao.php" ?>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +142,7 @@
                                             <h6>RETRABALHO</h6>
                                         </div>
                                         <div class="card-body d-flex justify-content-center">
-                                            <?php include "graficoretrabalho.php" ?>
+                                            <?php include "graficos/graficoretrabalho.php" ?>
                                         </div>
                                     </div>
                                 </div>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: index.php');
+    exit();
+}
+?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <title>FUNCIONÁRIOS</title>
     <link rel="icon" type="image/x-icon" href="caticon.png">
-    <link type="text/css" rel="stylesheet" href="estilo.css">
+    <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
@@ -18,7 +25,7 @@
     </div>
     <div class="d-flex  h-85">
         <div  class="d-flex shadow-lg navmenu">
-            <?php include "menunav.html" ?>
+            <?php include "view/menunav.php" ?>
         </div>
         <div class="w-100 h-85">
             <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">

@@ -16,7 +16,7 @@
 </style>
 <body class="d-flex justify-content-center align-items-center">
     <div class="col-2">
-        <form method="POST" action="autenticacao.php">
+        <form method="POST" action="controle/autenticacao.php">
             <label class="form-label">Usuário</label>
             <input class="form-control mb-3" name="usuario" type="text" autofocus required placeholder="Escreva o seu usuário">
             <label class="form-label">Senha</label>

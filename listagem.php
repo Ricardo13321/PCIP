@@ -1,5 +1,9 @@
 <?php 
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: index.php');
+    exit();
+}
 ?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
 
@@ -15,14 +19,14 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <title>LISTAGEM</title>
     <link rel="icon" type="image/x-icon" href="caticon.png">
-    <link type="text/css" rel="stylesheet" href="estilo.css">
+    <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
         <h2 class="m-auto" ><b>LISTAGEM</b></h2>
     </div>
     <div class="d-xl-flex  h-85">
-            <?php include "menunav.html" ?>
+            <?php include "view/menunav.php" ?>
         <div class="w-100 h-85">
             <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
                 <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
@@ -43,15 +47,14 @@ session_start();
                     </div>
                     <div class="d-flex flex-column flex-xxl-row">
                         <b><input class="m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
-                        <a href="#"><input class="m-1" type="button" value="SALVAR"></a>
+                        <a href="controle/salvar.php"><input class="m-1" type="button" value="SALVAR"></a>
                     </div>
                 </div>
-                
             </div> 
             <div class="overflow-auto" style="height: 90%; background: white;">         
                 <table class="table table-bordered">
                     <tbody id="table">
-                        <?php include "lista.php"; ?>
+                        <?php include "view/lista.php"; ?>
                     </tbody>
                 </table>
             </div>
@@ -70,7 +73,7 @@ session_start();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="form" class="modal-body text-start">
-                    <form method="get" action="cadastrarentrega.php">
+                    <form method="get" action="controle/cadastrarentrega.php">
                         <div class="mb-3"> 
                             <label class="form-label">Quantidade</label>
                             <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="quantidade">
