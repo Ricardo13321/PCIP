@@ -36,7 +36,10 @@ if (!isset($_SESSION['usuario'])) {
                 <div class="row g-0">
                     <div class="col-12">
                         <nav class="navbar">
-                            
+                            <li>
+                                <input type="date" value="<?php echo date("Y-m-d") ?>">
+                                <a href="controle/init.php"><input type="button" value="ATUALIZAR"></a>
+                            </li>
                         </nav>
                     </div>
                 <div class="row g-0">
@@ -81,7 +84,7 @@ if (!isset($_SESSION['usuario'])) {
                                             <h6>TOTAL PRODUZIDO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1>875</h1></span></b>
+                                            <b><span><h1><?php echo $_SESSION["producao_total"] ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -90,10 +93,10 @@ if (!isset($_SESSION['usuario'])) {
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>RETRABALHO COLA</h6>
+                                            <h6>PRODUTO FINAL</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1>56</h1></span></b>
+                                            <b><span><h1><?php echo $_SESSION["produto_final"] ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -102,10 +105,23 @@ if (!isset($_SESSION['usuario'])) {
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>RETRABALHO COURO</h6>
+                                            <h6>RETRABALHO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1>45</h1></span></b>
+                                            <b>
+                                                <span>
+                                                    <h3>Couro: 
+                                                        <?php 
+                                                            echo $_SESSION["retrabalho_couro"];
+                                                        ?>
+                                                        <br>
+                                                        Cola: 
+                                                        <?php
+                                                            echo $_SESSION["retrabalho_cola"];
+                                                        ?>
+                                                    </h3>
+                                                </span>
+                                            </b>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +133,7 @@ if (!isset($_SESSION['usuario'])) {
                                             <h6>REFUGO/PERDAS</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1>102</h1></span></b>
+                                            <b><span><h1><?php echo $_SESSION['perda'] ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>

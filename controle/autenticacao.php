@@ -10,7 +10,7 @@
 
     if ($indice && isset($senhas[$indice]) && $senha == $senhas[$indice]) {
         $_SESSION['usuario'] = $usuario;
-        header("location: ../dashboard.php");
+        header("location: init.php");
     }else {
         echo"<script>alert('credenciais não validas. TENTE NOVAMENTE!');</script>";
         echo"<script>window.location.replace('index.php');</script>";

@@ -9,7 +9,10 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="uwu" aria-label="Close">x</button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav flex-xl-column">
+                <ul class="navbar-nav flex-xl-column mt-0">
+                    <li class="nav-item bg-primary">
+                        <span class="nav-link active" style="color: white;"><?php echo $_SESSION['usuario']; ?></></span>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.php">DASHBOARD</a>
                     </li>

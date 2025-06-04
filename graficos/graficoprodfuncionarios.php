@@ -1,9 +1,25 @@
 <?php
-
-$nomes = array ("Juan", "Juan", "Juan", "Juan", "Calos", "Silvano", "Jason", "Victor");
-$produto_final = array ( 100, 90, 110, 130, 140, 80, 50, 97);
-$refugo = array (20, 20, 20, 20, 20, 20, 20, 20);
-$descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
+$produto_final = [];
+$refugo = [];
+$descarte = [];
+foreach ($_SESSION["nomes"] as $key_1 => $value_1) {
+  array_push($produto_final, 0);
+  array_push($refugo, 0);
+  array_push($descarte, 0);
+  foreach ($_SESSION["nome_entrega"] as $key_2 => $value_2) {
+    if ($value_1 == $value_2) {
+      if($_SESSION["estado"][$key_2] == "Produto final") {
+        $produto_final[$key_1] += $_SESSION["quantidade"][$key_2];
+      }
+      if ($_SESSION["estado"][$key_2] == "Defeito couro" || $_SESSION["estado"][$key_2] == "Defeito cola") {
+        $refugo[$key_1] += $_SESSION["quantidade"][$key_2];
+      }
+      if ($_SESSION["estado"][$key_2] == "Perda") {
+        $descarte[$key_1] += $_SESSION["quantidade"][$key_2];
+      }
+    }
+  }
+}
 
 ?>
 <script type="text/javascript">
@@ -14,8 +30,9 @@ $descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
         var data = google.visualization.arrayToDataTable([
           ["Funcionário", "Produto Final", "Refugo", "Defeito"],
           <?php
-          for ($i = 0; $i < count($nomes); $i++) {
-            echo '["'.$nomes[$i].'", '.$produto_final[$i].', '.$refugo[$i].', '.$descarte[$i].'],';
+
+          foreach ($_SESSION["nomes"] as $key => $value) {
+            echo '["'.$value.'", '.$produto_final[$key].', '.$refugo[$key].', '.$descarte[$key].'],';
           }
           ?>
         ]);
@@ -23,7 +40,7 @@ $descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
         var view = new google.visualization.DataView(data);
         view.setColumns([0, 1, 
                           { calc: "stringify",
-                          sourceColumn: 2,
+                          sourceColumn: 1,
                           type: "string",
                           role: "annotation" },
                           2,
@@ -48,4 +65,4 @@ $descarte = array (15, 15, 15, 15, 15, 15, 15, 15);
   
   _init();
   </script>
-<div id="barchart_values" style="width: 100%; height: 300px;"></div>
+<div id="barchart_values" style="width: 100%; height: 600px;"></div>

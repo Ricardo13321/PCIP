@@ -24,6 +24,6 @@ array_push($_SESSION['nome'], $_SESSION['usuario']);
 array_push($_SESSION['date'], date("d/m/Y"));
 array_push($_SESSION['hora'], date("H:i:s"));
 
-header("Location: ./listagem.php");
+header("Location: salvar.php");
 
 ?>
