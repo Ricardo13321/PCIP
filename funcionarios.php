@@ -73,7 +73,7 @@ if (!isset($_SESSION['usuario'])) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="form" class="modal-body text-start">
-                    <form method="get" action="controle/cadastrarentrega.php">
+                    <form method="get" action="#">
                         <div class="mb-3"> 
                             <label class="form-label">Nome</label>
                             <input class="form-control" type="text" placeholder="Nome" required autofocus min="0" name="nome">
