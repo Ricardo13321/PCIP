@@ -43,11 +43,11 @@ if (!isset($_SESSION['usuario'])) {
                         </div>
                     </div>
                     <div>
-                        <input type="search" id="pesquisar" placeholder="Pesquisar">
+                        <input type="search" id="pesquisar" class="" placeholder="Pesquisar">
                     </div>
                     <div class="d-flex flex-column flex-xxl-row">
-                        <b><input class="m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
-                        <a href="controle/salvar.php"><input class="m-1" type="button" value="SALVAR"></a>
+                        <b><input class="m-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
+                        <a href="controle/salvar.php"><input class="m-1 btn btn-primary" type="button" value="SALVAR"></a>
                     </div>
                 </div>
             </div> 
@@ -75,8 +75,20 @@ if (!isset($_SESSION['usuario'])) {
                 <div id="form" class="modal-body text-start">
                     <form method="get" action="controle/cadastrarentrega.php">
                         <div class="mb-3"> 
-                            <label class="form-label">Quantidade</label>
-                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="quantidade">
+                            <label class="form-label">Produto Final</label>
+                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="Produto_final">
+                        </div>
+                        <div class="mb-3"> 
+                            <label class="form-label">Defeito Couro</label>
+                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="Defeito_couro">
+                        </div>
+                        <div class="mb-3"> 
+                            <label class="form-label">Defeito Cola</label>
+                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="Defeito_cola">
+                        </div>
+                        <div class="mb-3"> 
+                            <label class="form-label">Perda</label>
+                            <input class="form-control" type="number" placeholder="0" required autofocus min="0" name="Perda">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Código</label>
@@ -85,19 +97,9 @@ if (!isset($_SESSION['usuario'])) {
                                     <option value="31351">31351</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Estado</label>
-                            <select class="form-select" id="floatingSelect" aria-label="condicao" name="estado" required>
-                                    <option selected disabled>Selecione</option>
-                                    <option value="Produto final">Produto final</option>
-                                    <option value="Defeito couro">Defeito couro</option>
-                                    <option value="Defeito cola">Defeito cola</option>
-                                    <option value="Perda">Perda</option>
-                            </select>
-                        </div>
                         <div class="float-end">
-                            <input  type="submit" value="Salvar">
-                            <input type="button" data-bs-dismiss="modal" value="Cancelar">
+                            <input class="btn btn-success" type="submit" value="Salvar">
+                            <input class="btn btn-danger" type="button" data-bs-dismiss="modal" value="Cancelar">
                         </div>
                     </form>
                 </div>

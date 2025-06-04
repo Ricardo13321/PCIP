@@ -17,7 +17,7 @@ $dados = $_SESSION['estado'];
 $json = json_encode($dados, JSON_PRETTY_PRINT);
 file_put_contents('../data/estado.json', $json);
 
-$dados = $_SESSION['nome'];
+$dados = $_SESSION['nome_entrega'];
 $json = json_encode($dados, JSON_PRETTY_PRINT);
 file_put_contents('../data/nome_entrega.json', $json);
 
@@ -29,5 +29,5 @@ $dados = $_SESSION['hora'];
 $json = json_encode($dados, JSON_PRETTY_PRINT);
 file_put_contents('../data/hora.json',$json );
 
-header("Location: ../listagem.php");
+header("Location: init.php");
 ?>

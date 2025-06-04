@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
@@ -6,6 +6,8 @@ if (!isset($_SESSION['usuario'])) {
 }
 ?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,38 +17,44 @@ if (!isset($_SESSION['usuario'])) {
     <meta http-equiv="content-language" content="pt-br">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <title>FUNCIONÁRIOS</title>
+    <title>LISTAGEM</title>
     <link rel="icon" type="image/x-icon" href="caticon.png">
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
-        <h2 class="m-auto" ><b>FUNCIONÁRIOS</b></h2>
+        <h2 class="m-auto" ><b>LISTAGEM</b></h2>
     </div>
-    <div class="d-flex  h-85">
-        <div  class="d-flex shadow-lg navmenu">
+    <div class="d-xl-flex  h-85">
             <?php include "view/menunav.php" ?>
-        </div>
         <div class="w-100 h-85">
             <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
-                <strong><h3>LISTAGEM DE FUNCIONÁRIOS</h3></strong>
+                <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
                 <div class="row row-cols-sm-auto d-flex m-0 p-0 h-100">
                     <div>
-                        <input type="search" id="pesquisar" placeholder="Pesquisar">
+                        Filtrar por:
+                        <div>
+                            <input type="checkbox" name="filtro">
+                            <label>Funcionário</label>
+                            <input type="checkbox" name="filtro">
+                            <label>Modelo</label>
+                            <input type="checkbox" name="filtro">
+                            <label>Estado</label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="search" id="pesquisar" class="" placeholder="Pesquisar">
+                    </div>
+                    <div class="d-flex flex-column flex-xxl-row">
+                        <b><input class="m-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
+                        <a href="controle/salvar.php"><input class="m-1 btn btn-primary" type="button" value="SALVAR"></a>
                     </div>
                 </div>
             </div> 
             <div class="overflow-auto" style="height: 90%; background: white;">         
                 <table class="table table-bordered">
                     <tbody id="table">
-                        <tr>
-                            <th>Funcionário</th>
-                            <th>Produção</th>
-                            <th>Perda</th>
-                            <th>Data</th>
-                            <th>Horas trabalhada</th>
-                        </tr>
-                        <?php include "lista.html"; ?>
+                        <?php include "view/listafuncionarios.php" ?>
                     </tbody>
                 </table>
             </div>
@@ -54,6 +62,44 @@ if (!isset($_SESSION['usuario'])) {
                 
             </div>
         </div>        
+    </div>
+
+    <!-- Modal CADASTRAR-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="exampleModalLabel">CADASTRAR ENTREGA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="form" class="modal-body text-start">
+                    <form method="get" action="controle/cadastrarentrega.php">
+                        <div class="mb-3"> 
+                            <label class="form-label">Nome</label>
+                            <input class="form-control" type="text" placeholder="Nome" required autofocus min="0" name="nome">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cargo</label>
+                            <input class="form-control" type="text" placeholder="Cargo" required autofocus min="0" name="cargo">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Estado</label>
+                            <select class="form-select" id="floatingSelect" aria-label="condicao" name="estado" required>
+                                    <option selected disabled>Selecione</option>
+                                    <option value="Produto final">Produto final</option>
+                                    <option value="Defeito couro">Defeito couro</option>
+                                    <option value="Defeito cola">Defeito cola</option>
+                                    <option value="Perda">Perda</option>
+                            </select>
+                        </div>
+                        <div class="float-end">
+                            <input  type="submit" value="Salvar">
+                            <input type="button" data-bs-dismiss="modal" value="Cancelar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

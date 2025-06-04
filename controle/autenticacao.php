@@ -13,6 +13,6 @@
         header("location: init.php");
     }else {
         echo"<script>alert('credenciais não validas. TENTE NOVAMENTE!');</script>";
-        echo"<script>window.location.replace('index.php');</script>";
+        echo"<script>window.location.replace('../index.php');</script>";
     }
 ?>

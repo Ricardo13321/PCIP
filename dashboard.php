@@ -37,42 +37,46 @@ if (!isset($_SESSION['usuario'])) {
                     <div class="col-12">
                         <nav class="navbar">
                             <li>
-                                <input type="date" value="<?php echo date("Y-m-d") ?>">
-                                <a href="controle/init.php"><input type="button" value="ATUALIZAR"></a>
+                                <input type="date" class="form-control" value="<?php echo date("Y-m-d") ?>">
+                                <a href="controle/init.php" class="btn btn-primary">ATUALIZAR</a>
                             </li>
                         </nav>
                     </div>
                 <div class="row g-0">
                     <div class="col-xl-9">
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>PERFORMANCE</h6>
+                        <div class="row">
+                            <div class="p-2 m-0 col-6">
+                                <div class="card shadow-lg">
+                                    <div class="card-header">
+                                        <h6>PERFORMANCE</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <?php include "graficos/graficoperformance.php" ?><hr>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <?php include "graficos/graficoperformance.php" ?><hr>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>META SEMANAL</h6>
-                                </div>
-                                <div class="card-body">
-                                    <?php include "graficos/graficometa.php" ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 m-0">
-                            <div class="card shadow-lg">
-                                <div class="card-header">
-                                    <h6>PRODUÇÃO POR FUNCIONÁRIO</h6>
-                                </div>
-                                <div class="card-body">
-                                    <?php include "graficos/graficoprodfuncionarios.php" ?>
+                                <div class="card shadow-lg">
+                                    <div class="card-header">
+                                        <h6>META SEMANAL</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <?php include "graficos/graficometa.php" ?>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="p-2 m-0 col-6">
+                                <div class="card shadow-lg">
+                                    <div class="card-header">
+                                        <h6>PRODUÇÃO POR FUNCIONÁRIO</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <?php include "graficos/graficoprodfuncionarios.php" ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2 m-0 col-6">
+                                
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-xl-3">

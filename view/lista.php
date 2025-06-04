@@ -21,7 +21,7 @@ echo "
 </tr>
 ";
 
-for ($i = 0; $i < count($_SESSION['nome']); $i++) {
+for ($i = 0; $i < count($_SESSION['nome_entrega']); $i++) {
     echo "
         <tr>
             <td>".$_SESSION['nome_entrega'][$i]."</td>

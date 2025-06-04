@@ -22,4 +22,3 @@
 - dashboard admin
 - listagem diaria dos funcionários/cadastro de refugo e tempo de produção
 <img src="https://metricalist.com/wp-content/uploads/2023/04/Ecommerce%20Sales%20Dashboard.PNG">
-https://prod.liveshare.vsengsaas.visualstudio.com/join?3F1A8670B0E90C424AAC40557E28DE54CCFC
