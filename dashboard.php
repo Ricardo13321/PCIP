@@ -8,9 +8,6 @@ if (!isset($_SESSION['usuario'])) {
 date_default_timezone_set('America/Sao_Paulo');
 
 $datesplit = explode('/', $_SESSION['date'][0]);
-echo'<pre>';
-print_r($datesplit);
-echo '</pre>';
 ?>
 
 <!DOCTYPE html>
