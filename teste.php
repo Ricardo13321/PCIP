@@ -20,5 +20,7 @@ echo "<h1>Nomes da lista de entrega</h1>";
 print_r($_SESSION["nome_entrega"]);
 echo "<h1>Nomes</h1>";
 print_r($_SESSION["nomes"]);
+echo "<h1>Cargos</h1>";
+print_r($_SESSION['cargos']);
 echo '</pre>';
 ?>

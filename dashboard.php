@@ -8,6 +8,8 @@ if (!isset($_SESSION['usuario'])) {
 date_default_timezone_set('America/Sao_Paulo');
 
 $datesplit = explode('/', $_SESSION['date'][0]);
+
+include('controle/formulas.php');
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +54,88 @@ $datesplit = explode('/', $_SESSION['date'][0]);
                         </nav>
                     </div>
                 <div class="row g-0">
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>Taxa de Produção</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b><span><h1><?php echo $Taxa_de_Producao ?></h1></span></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>Taxa de Refugo</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b><span><h1><?php echo $taxa_refugo ?></h1></span></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>Tempo Médio de Produção</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b>
+                                                <span>
+                                                    <h1>
+                                                        <?php 
+                                                            echo $Tempo_medio_producao
+                                                        ?>
+                                                    </h1>
+                                                </span>
+                                            </b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>TOTAL PRODUZIDO</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b><span><h1><?php echo $_SESSION["producao_total"] ?></h1></span></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>PRODUTO FINAL</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b><span><h1><?php echo $_SESSION["produto_final"] ?></h1></span></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-sm-2">
+                                <div class="p-2 m-0">
+                                    <div class="card shadow-lg">
+                                        <div class="card-header">
+                                            <h6>REFUGO/PERDAS</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <b><span><h1><?php echo $_SESSION['perda'] ?></h1></span></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="row g-0">
                     <div class="col-xl-9">
                         <div class="row">
                             <div class="p-2 m-0 col-6">
@@ -90,30 +174,7 @@ $datesplit = explode('/', $_SESSION['date'][0]);
                     </div>
                     <div class="col-xl-3">
                         <div class="row g-0">
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>TOTAL PRODUZIDO</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1><?php echo $_SESSION["producao_total"] ?></h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>PRODUTO FINAL</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1><?php echo $_SESSION["produto_final"] ?></h1></span></b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col col-sm-12">
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
@@ -135,18 +196,6 @@ $datesplit = explode('/', $_SESSION['date'][0]);
                                                     </h3>
                                                 </span>
                                             </b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12">
-                                <div class="p-2 m-0">
-                                    <div class="card shadow-lg">
-                                        <div class="card-header">
-                                            <h6>REFUGO/PERDAS</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <b><span><h1><?php echo $_SESSION['perda'] ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>

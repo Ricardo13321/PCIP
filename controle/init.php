@@ -8,12 +8,14 @@ $filenomeentrega = file_get_contents("../data/nome_entrega.json");
 $filedate = file_get_contents("../data/date.json");
 $filehora = file_get_contents("../data/hora.json");
 $filenomes = file_get_contents("../data/nome.json");
+$filecargos = file_get_contents("../data/cargos.json");
 
 $_SESSION['codigo'] = json_decode($filecodigo, true);
 $_SESSION['quantidade'] = json_decode($filequantidade, true);
 $_SESSION['estado'] = json_decode($fileestado, true);
 $_SESSION['date'] = json_decode($filedate, true);
 $_SESSION['hora'] = json_decode($filehora, true);
+$_SESSION['cargos'] = json_decode($filecargos, true);
 
 $_SESSION["nome_entrega"] = json_decode($filenomeentrega, true);
 $_SESSION["nomes"] = json_decode($filenomes, true);
