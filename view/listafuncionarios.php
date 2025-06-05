@@ -11,6 +11,7 @@ if (!isset($_SESSION['usuario'])) {
 
 echo "
 <tr>
+    <th>ID</th>
     <th>NOME</th>
     <th>CARGO</th>
     <th>SETOR</th>
@@ -21,8 +22,11 @@ echo "
 for ($i = 0; $i < count($_SESSION['nomes']); $i++) {
     echo "
         <tr>
+            <td>$i</td>
             <td>".$_SESSION['nomes'][$i]."</td>
-            
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     ";
 }

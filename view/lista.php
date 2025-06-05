@@ -11,6 +11,7 @@ if (!isset($_SESSION['usuario'])) {
 
 echo "
 <tr>
+    <th>ID</th>
     <th>Funcionário</th>
     <th>Código</th>
     <th>Quantidade</th>
@@ -24,6 +25,7 @@ echo "
 for ($i = 0; $i < count($_SESSION['nome_entrega']); $i++) {
     echo "
         <tr>
+            <td>$i</td>
             <td>".$_SESSION['nome_entrega'][$i]."</td>
             <td>".$_SESSION['codigo'][$i]."</td>
             <td>".$_SESSION['quantidade'][$i]."</td>

@@ -6,8 +6,6 @@ if (!isset($_SESSION['usuario'])) {
 }
 ?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

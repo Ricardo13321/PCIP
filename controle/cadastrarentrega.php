@@ -42,5 +42,5 @@ function adicionardados($codigo) {
     array_push($_SESSION['hora'], date("H:i:s"));
 }
 
-header("Location: salvar.php");
+header("Location: ../listagem.php");
 ?>
