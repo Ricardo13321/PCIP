@@ -4,6 +4,13 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
     exit();
 }
+
+date_default_timezone_set('America/Sao_Paulo');
+
+$datesplit = explode('/', $_SESSION['date'][0]);
+echo'<pre>';
+print_r($datesplit);
+echo '</pre>';
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +44,12 @@ if (!isset($_SESSION['usuario'])) {
                     <div class="col-12">
                         <nav class="navbar">
                             <li>
-                                <input type="date" class="form-control" value="<?php echo date("Y-m-d") ?>">
+                                <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>">
+                            </li>
+                            <li>
+                                <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>">
+                            </li>
+                            <li>
                                 <a href="controle/init.php" class="btn btn-primary">ATUALIZAR</a>
                             </li>
                         </nav>

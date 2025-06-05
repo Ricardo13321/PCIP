@@ -29,5 +29,5 @@ $dados = $_SESSION['hora'];
 $json = json_encode($dados, JSON_PRETTY_PRINT);
 file_put_contents('../data/hora.json',$json );
 
-header("Location: init.php");
+header("Location: listagem.php");
 ?>

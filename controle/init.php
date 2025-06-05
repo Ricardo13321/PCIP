@@ -37,5 +37,5 @@ foreach ($_SESSION["estado"] as $key => $value) {
     $_SESSION["producao_total"] += $_SESSION["quantidade"][$key];
 }
 
-header("Location: ../listagem.php");
+header("Location: ../dashboard.php");
 ?>
