@@ -3,7 +3,6 @@
 session_start();
 
 echo '<pre>';
-
 echo "<h1>Usuario</h1>";
 print_r($_SESSION['usuario']);
 echo "<br><h1>Quantidade</h1>";
@@ -22,5 +21,23 @@ echo "<h1>Nomes</h1>";
 print_r($_SESSION["nomes"]);
 echo "<h1>Cargos</h1>";
 print_r($_SESSION['cargos']);
+echo "<h1>Setor Funcionários</h1>";
+print_r($_SESSION["setor_funcionarios"]);
+echo "<h1>TAXA DE PRODUÇÃO</h1>";
+print_r($_SESSION["Taxa_de_Producao"]);
+echo "<h1>TEMPO MÉDIO DE PRODUÇÃO</h1>";
+print_r($_SESSION["Tempo_medio_producao"]);
+echo "<h1>TAXA DE REFUGO</h1>";
+print_r($_SESSION["taxa_refugo"]);
+echo "<h1>PORCENTAGEM DE PERDA</h1>";
+print_r($_SESSION["porcentagem_perda"]);
+
+echo "<h1>PRODUTO FINAL POR FUNCIONÁRIO</h1>";
+print_r($_SESSION["produto_final_funcionario"]);
+echo "<h1>REFUGO POR FUNCIONÁRIO</h1>";
+print_r($_SESSION["refugo_funcionario"]);
+echo "<h1>DESCARTE POR FUNCIONÁRIO</h1>";
+print_r($_SESSION["descarte_funcionario"]);
+
 echo '</pre>';
 ?>

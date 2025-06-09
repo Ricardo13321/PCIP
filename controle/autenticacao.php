@@ -10,6 +10,7 @@
 
     if ($indice && isset($senhas[$indice]) && $senha == $senhas[$indice]) {
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['indice'] = $indice; 
         header("location: init.php");
     }else {
         echo"<script>alert('credenciais não validas. TENTE NOVAMENTE!');</script>";

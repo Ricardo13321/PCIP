@@ -43,18 +43,12 @@ if (!isset($_SESSION['usuario'])) {
                     <div>
                         <input type="search" id="pesquisar" class="" placeholder="Pesquisar">
                     </div>
-                    <?php if ($_SESSION['privilegios'] == 'admin') { ?>
-                    <div class="d-flex flex-column flex-xxl-row">
-                        <b><input class="m-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
-                        <a href="controle/salvar.php"><input class="m-1 btn btn-primary" type="button" value="SALVAR"></a>
-                    </div>
-                    <?php } ?>
                 </div>
             </div> 
             <div class="overflow-auto" style="height: 90%; background: white;">         
                 <table class="table table-bordered">
                     <tbody id="table">
-                        <?php include "view/listafuncionarios.php" ?>
+                        <?php include "view/listadados.php" ?>
                     </tbody>
                 </table>
             </div>
@@ -62,40 +56,6 @@ if (!isset($_SESSION['usuario'])) {
                 
             </div>
         </div>        
-    </div>
-
-    <!-- Modal CADASTRAR-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fs-5" id="exampleModalLabel">CADASTRAR ENTREGA</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <?php if ($_SESSION['privilegios'] == 'admin') { ?>
-                <div id="form" class="modal-body text-start">
-                    <form method="get" action="cadastrarfuncionario.php">
-                        <div class="mb-3"> 
-                            <label class="form-label">Nome</label>
-                            <input class="form-control" type="text" placeholder="Nome" required autofocus name="nome">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Cargo</label>
-                            <input class="form-control" type="text" placeholder="Cargo" required name="cargo">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Setor</label>
-                            <input class="form-control" type="text" placeholder="Setor" required  name="setor">
-                        </div>
-                        <div class="float-end">
-                            <input  type="submit" value="Salvar">
-                            <input type="button" data-bs-dismiss="modal" value="Cancelar">
-                        </div>
-                    </form>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
     </div>
 </body>
 </html>

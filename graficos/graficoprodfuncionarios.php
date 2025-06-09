@@ -1,38 +1,14 @@
-<?php
-$produto_final = [];
-$refugo = [];
-$descarte = [];
-foreach ($_SESSION["nomes"] as $key_1 => $value_1) {
-  array_push($produto_final, 0);
-  array_push($refugo, 0);
-  array_push($descarte, 0);
-  foreach ($_SESSION["nome_entrega"] as $key_2 => $value_2) {
-    if ($value_1 == $value_2) {
-      if($_SESSION["estado"][$key_2] == "Produto final") {
-        $produto_final[$key_1] += $_SESSION["quantidade"][$key_2];
-      }
-      if ($_SESSION["estado"][$key_2] == "Defeito couro" || $_SESSION["estado"][$key_2] == "Defeito cola") {
-        $refugo[$key_1] += $_SESSION["quantidade"][$key_2];
-      }
-      if ($_SESSION["estado"][$key_2] == "Perda") {
-        $descarte[$key_1] += $_SESSION["quantidade"][$key_2];
-      }
-    }
-  }
-}
-
-?>
 <script type="text/javascript">
     function _init() {
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Funcionário", "Produto Final", "Refugo", "Defeito"],
+          ["Funcionário", "Produto Final", "Defeito", "Refugo"],
           <?php
 
           foreach ($_SESSION["nomes"] as $key => $value) {
-            echo '["'.$value.'", '.$produto_final[$key].', '.$refugo[$key].', '.$descarte[$key].'],';
+            echo '["'.$value.'", '.$_SESSION['produto_final_funcionario'][$key].', '.$_SESSION['descarte_funcionario'][$key].', '.$_SESSION['refugo_funcionario'][$key].'],';
           }
           ?>
         ]);

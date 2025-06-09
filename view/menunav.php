@@ -23,6 +23,9 @@
                         <a class="nav-link active" aria-current="page" href="funcionarios.php">FUNCIONÁRIOS</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="listadados.php">DADOS</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="controle/sair.php">SAIR</a>
                     </li>
                 </ul>

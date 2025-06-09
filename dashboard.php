@@ -41,15 +41,21 @@ include('controle/formulas.php');
             <div class="text-center">
                 <div class="row g-0">
                     <div class="col-12">
-                        <nav class="navbar">
+                        <nav class="navbar align-items-start">
                             <li>
-                                <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>">
+                                <div class="input-group">
+                                    <label name="data-inicial" class="input-group-text">Data Inicial</label>
+                                    <input name="data-inicial" type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>">
+                                </div>
                             </li>
                             <li>
-                                <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>">
+                                <div class="input-group">
+                                    <span class="input-group-text">Data Final</span>
+                                    <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>">
+                                </div>
                             </li>
-                            <li>
-                                <a href="controle/init.php" class="btn btn-primary">ATUALIZAR</a>
+                            <li class="">
+                                <a href="controle/init.php" class="btn btn-primary me-2">ATUALIZAR</a>
                             </li>
                         </nav>
                     </div>
@@ -61,7 +67,7 @@ include('controle/formulas.php');
                                             <h6>Taxa de Produção</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1><?php echo $Taxa_de_Producao ?></h1></span></b>
+                                            <b><span><h1><?php echo $_SESSION['Taxa_de_Producao'] ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +79,7 @@ include('controle/formulas.php');
                                             <h6>Taxa de Refugo</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1><?php echo $taxa_refugo ?></h1></span></b>
+                                            <b><span><h1><?php echo $_SESSION['taxa_refugo']."%" ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +95,7 @@ include('controle/formulas.php');
                                                 <span>
                                                     <h1>
                                                         <?php 
-                                                            echo $Tempo_medio_producao
+                                                            echo $_SESSION['Tempo_medio_producao']
                                                         ?>
                                                     </h1>
                                                 </span>

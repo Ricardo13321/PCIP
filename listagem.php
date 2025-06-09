@@ -4,6 +4,9 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: index.php');
     exit();
 }
+
+date_default_timezone_set('America/Sao_Paulo');
+$datesplit = explode('/', $_SESSION['date'][0]);
 ?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
 
@@ -28,22 +31,14 @@ if (!isset($_SESSION['usuario'])) {
     <div class="d-xl-flex  h-85">
             <?php include "view/menunav.php" ?>
         <div class="w-100 h-85">
-            <div class="py-3 d-flex justify-content-between" style="background: whitesmoke;">
-                <strong><h3>LISTAGEM DO DIA 27/05/2025</h3></strong>
+            <div class="d-flex justify-content-between" style="background: whitesmoke;">
+                <strong class="m-auto p-2"><h3>LISTAGEM DO DIA <?php echo date("d/m/Y"); ?></h3></strong>
+                <div class="border px-2">
+                    <b><input class="m-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#atualizardata" type="button" value="MUDAR DATA"></b>
+                </div>
                 <div class="row row-cols-sm-auto d-flex m-0 p-0 h-100">
-                    <div>
-                        Filtrar por:
-                        <div>
-                            <input type="checkbox" name="filtro">
-                            <label>Funcionário</label>
-                            <input type="checkbox" name="filtro">
-                            <label>Modelo</label>
-                            <input type="checkbox" name="filtro">
-                            <label>Estado</label>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="search" id="pesquisar" class="" placeholder="Pesquisar">
+                    <div class="m-auto">
+                        <input type="search" id="pesquisar" class="form-control" placeholder="Pesquisar">
                     </div>
                     <div class="d-flex flex-column flex-xxl-row">
                         <b><input class="m-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="CADASTRAR"></b>
@@ -59,7 +54,6 @@ if (!isset($_SESSION['usuario'])) {
                 </table>
             </div>
             <div class="h-auto p-1" style="background: whitesmoke;">
-                
             </div>
         </div>        
     </div>
@@ -103,6 +97,38 @@ if (!isset($_SESSION['usuario'])) {
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Filtrar Data-->
+    <div class="modal fade" id="atualizardata" tabindex="-1" aria-labelledby="atualizardata" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="atualizardata">Mostrar a lista dos dias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <divl class="modal-body">
+                    <form method="post" action="listagem.php" class="form">
+                        <div>
+                            <label>Data Inicial</label>
+                            <div class="input-group my-2">
+                                <label name="data-inicial" class="input-group-text">Inicial</label>
+                                <input name="data-inicial" type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>">
+                            </div>
+                            <label>Data Final</label>
+                            <div class="input-group my-2">
+                                <span class="input-group-text">Final</span>
+                                <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>">
+                            </div>
+                        </div>
+                        <div>
+                        <input type="submit" class="btn btn-primary" value="ATUALIZAR" >
+                        <input type="button" class="btn btn-danger" data-bs-dismiss="modal" value="CANCELAR" >
+                        </div>
+                    </form>
+                </divl>
             </div>
         </div>
     </div>
@@ -160,7 +186,6 @@ if (!isset($_SESSION['usuario'])) {
             
             nomatch.style.display = allfalse?'':'none';
             trList[0].style.display = allfalse?'none':'';
-
         });
     });
 </script>
