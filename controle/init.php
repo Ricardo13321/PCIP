@@ -12,16 +12,16 @@ $filecargos = file_get_contents("../data/cargos.json");
 $filesetorfuncionarios = file_get_contents("../data/setorfuncionarios.json");
 $filedataadmissao = file_get_contents("../data/dataadmissao.json");
 
+$_SESSION['cargos'] = json_decode($filecargos, true);
+$_SESSION["nomes"] = json_decode($filenomes, true);
+$_SESSION["data_admissao"] = json_decode($filedataadmissao, true);
+$_SESSION['setor_funcionarios'] = json_decode($filesetorfuncionarios, true);
 $_SESSION['codigo'] = json_decode($filecodigo, true);
 $_SESSION['quantidade'] = json_decode($filequantidade, true);
 $_SESSION['estado'] = json_decode($fileestado, true);
 $_SESSION['date'] = json_decode($filedate, true);
 $_SESSION['hora'] = json_decode($filehora, true);
-$_SESSION['cargos'] = json_decode($filecargos, true);
-$_SESSION['setor_funcionarios'] = json_decode($filesetorfuncionarios, true);
 $_SESSION["nome_entrega"] = json_decode($filenomeentrega, true);
-$_SESSION["nomes"] = json_decode($filenomes, true);
-$_SESSION["data_admissao"] = json_decode($filedataadmissao, true);
 
 $_SESSION["retrabalho_couro"] = 0;
 $_SESSION["retrabalho_cola"] = 0;
@@ -51,8 +51,31 @@ foreach ($_SESSION["estado"] as $key => $value) {
     $_SESSION["producao_total"] += $_SESSION["quantidade"][$key];
 }
 
-//Calcula e inicia a sessão dos valores calculados
-include 'forumlas.php';
 
-header("Location: ../dashboard.php");
+date_default_timezone_set('America/Sao_Paulo');
+
+if (isset($_GET['data_inicial']) && isset($_GET['data_final'])) {
+    $data_inicial = $_GET['data_inicial'];
+    $data_final = $_GET['data_final'];
+} else {
+    $data_inicial = date('Y/m/d');
+    $data_final = date('Y/m/d');
+}
+
+$data_inicial_split = explode('/', $data_inicial);
+$data_final_split = explode('/', $data_final);
+echo "<pre>";
+print_r($data_final_split);
+print_r($data_inicial_split);
+echo "<pre>";
+
+foreach ($_SESSION["date"] as $key => $value) {
+    $datesplit = explode("/", $value);
+    
+    if($datesplit[2] >= $data_inicial_split[0] && $datesplit[2] <= $data_final_split[0]) {
+    }
+}
+
+
+//header("Location: ../dashboard.php");
 ?>

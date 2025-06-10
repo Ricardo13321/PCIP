@@ -42,21 +42,17 @@ include('controle/formulas.php');
                 <div class="row g-0">
                     <div class="col-12">
                         <nav class="navbar align-items-start">
-                            <li>
+                            <form method="get" action="controle/init.php">
                                 <div class="input-group">
                                     <label name="data-inicial" class="input-group-text">Data Inicial</label>
                                     <input name="data-inicial" type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>">
                                 </div>
-                            </li>
-                            <li>
                                 <div class="input-group">
                                     <span class="input-group-text">Data Final</span>
                                     <input type="date" class="form-control" min="<?php echo $datesplit[2].'-'.$datesplit[1].'-'.$datesplit[0] ?>" max="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>">
                                 </div>
-                            </li>
-                            <li class="">
-                                <a href="controle/init.php" class="btn btn-primary me-2">ATUALIZAR</a>
-                            </li>
+                                <input type="submit" value="ATUALIZAR" class="btn btn-primary me-2">
+                            </form>
                         </nav>
                     </div>
                 <div class="row g-0">
