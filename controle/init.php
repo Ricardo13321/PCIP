@@ -77,5 +77,5 @@ foreach ($_SESSION["date"] as $key => $value) {
 }
 
 
-//header("Location: ../dashboard.php");
+header("Location: ../dashboard.php");
 ?>
