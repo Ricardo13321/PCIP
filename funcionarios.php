@@ -20,8 +20,8 @@ if (!isset($_SESSION['usuario'])) {
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
-        <h2 class="m-auto" ><b>LISTAGEM</b></h2>
+    <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
+        <h2 class="m-auto" ><b>FUNCIONÁRIO</b></h2>
     </div>
     <div class="d-xl-flex  h-85">
             <?php include "view/menunav.php" ?>

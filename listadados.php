@@ -5,7 +5,11 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 ?>
-<!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
+<!-- Dayli - 11/06
+
+Implementação de Ordenação da Tabela: Adição de funcionalidades (via PHP ou JavaScript) para permitir que o usuário ordene a tabela por diferentes colunas (data, quantidade produzida, taxa de produção, etc.).
+
+Paginação da Tabela (Básico): Implementação de uma paginação simples para dividir a tabela de dados em páginas menores, facilitando a visualização quando houver muitos registros. -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,8 +24,8 @@ if (!isset($_SESSION['usuario'])) {
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
-        <h2 class="m-auto" ><b>LISTAGEM</b></h2>
+    <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
+        <h2 class="m-auto" ><b>DADOS</b></h2>
     </div>
     <div class="d-xl-flex  h-85">
             <?php include "view/menunav.php" ?>

@@ -60,7 +60,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>Taxa de Produção</h6>
+                                            <h6 class="text-truncate">TAXA DE PRODUÇÃO</h6>
                                         </div>
                                         <div class="card-body">
                                             <b><span><h1><?php echo $_SESSION['Taxa_de_Producao'] ?></h1></span></b>
@@ -72,7 +72,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>Taxa de Refugo</h6>
+                                            <h6 class="text-truncate">TAXA DE REFUGO</h6>
                                         </div>
                                         <div class="card-body">
                                             <b><span><h1><?php echo $_SESSION['taxa_refugo']."%" ?></h1></span></b>
@@ -84,7 +84,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>Tempo Médio de Produção</h6>
+                                            <h6 class="text-truncate">TEMPO MEDIO DE PRODUÇÃO</h6>
                                         </div>
                                         <div class="card-body">
                                             <b>
@@ -104,7 +104,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>TOTAL PRODUZIDO</h6>
+                                            <h6 class="text-truncate">TOTAL PRODUZIDO</h6>
                                         </div>
                                         <div class="card-body">
                                             <b><span><h1><?php echo $_SESSION["producao_total"] ?></h1></span></b>
@@ -116,7 +116,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>PRODUTO FINAL</h6>
+                                            <h6 class="text-truncate">PRODUTO FINAL</h6>
                                         </div>
                                         <div class="card-body">
                                             <b><span><h1><?php echo $_SESSION["produto_final"] ?></h1></span></b>
@@ -128,7 +128,7 @@ include('controle/formulas.php');
                                 <div class="p-2 m-0">
                                     <div class="card shadow-lg">
                                         <div class="card-header">
-                                            <h6>REFUGO/PERDAS</h6>
+                                            <h6 class="text-truncate">REFUGO/PERDAS</h6>
                                         </div>
                                         <div class="card-body">
                                             <b><span><h1><?php echo $_SESSION['perda'] ?></h1></span></b>

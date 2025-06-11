@@ -9,6 +9,12 @@ date_default_timezone_set('America/Sao_Paulo');
 $datesplit = explode('/', $_SESSION['date'][0]);
 ?>
 <!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
+<!-- 
+Dayli - 11/06
+
+Implementação de Ordenação da Tabela: Adição de funcionalidades (via PHP ou JavaScript) para permitir que o usuário ordene a tabela por diferentes colunas (data, quantidade produzida, taxa de produção, etc.).
+
+Paginação da Tabela (Básico): Implementação de uma paginação simples para dividir a tabela de dados em páginas menores, facilitando a visualização quando houver muitos registros. -->
 
 
 <!DOCTYPE html>
@@ -25,7 +31,7 @@ $datesplit = explode('/', $_SESSION['date'][0]);
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <div class="menutopo d-flex align-items-center shadow-lg h-15 bg-primary text-white">
+    <div class="menutopo h-10 d-none d-xl-flex align-items-center bg-primary text-white">
         <h2 class="m-auto" ><b>LISTAGEM</b></h2>
     </div>
     <div class="d-xl-flex  h-85">
@@ -46,14 +52,8 @@ $datesplit = explode('/', $_SESSION['date'][0]);
                     </div>
                 </div>
             </div> 
-            <div class="overflow-auto" style="height: 90%; background: white;">         
-                <table class="table table-bordered">
-                    <tbody id="table">
-                        <?php include "view/lista.php"; ?>
-                    </tbody>
-                </table>
-            </div>
-            <div class="h-auto p-1" style="background: whitesmoke;">
+            <div class="overflow-auto" style="height: 100%; background: white;">         
+                <?php include "view/lista.php"; ?>
             </div>
         </div>        
     </div>
