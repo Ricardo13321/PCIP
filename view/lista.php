@@ -35,12 +35,12 @@ if($ordem != "id") {
     foreach ($_SESSION[$ordem] as $key1 => $value1) {
         foreach ($array_ordenado as $key2 => $value2) {
             if($value1 == $value2) {
-                array_push($nome_entrega, $_SESSION['nome_entrega'][$key2]);
-                array_push($codigo, $_SESSION['codigo'][$key2]);
-                array_push($quantidade, $_SESSION['quantidade'][$key2]);
-                array_push($estado, $_SESSION['estado'][$key2]);
-                array_push($date, $_SESSION['date'][$key2]);
-                array_push($hora, $_SESSION['hora'][$key2]);
+                array_push($nome_entrega, $_SESSION['nome_entrega'][$key1]);
+                array_push($codigo, $_SESSION['codigo'][$key1]);
+                array_push($quantidade, $_SESSION['quantidade'][$key1]);
+                array_push($estado, $_SESSION['estado'][$key1]);
+                array_push($date, $_SESSION['date'][$key1]);
+                array_push($hora, $_SESSION['hora'][$key1]);
             }
         }
     }
