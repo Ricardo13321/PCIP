@@ -41,7 +41,7 @@
       }
     </script>
   </head>
-  <body>
-    <div id="chart_div"  style="width: 100%;"></div>
+  <body style="overflow: hidden;">
+    <div id="chart_div"  style="width: 100%; height: 500px;"></div>
   </body>
 </html>

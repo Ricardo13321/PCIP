@@ -26,7 +26,7 @@
       }
     </script>
   </head>
-  <body>
-    <div id="medidor"></div>
+  <body style="overflow: hidden;">
+    <div id="medidor" style="width: 400px; height: 120px;"></div>
   </body>
 </html>

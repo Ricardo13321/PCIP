@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -24,7 +25,7 @@
       }
     </script>
   </head>
-  <body>
-    <div id="piechart"></div>
+  <body style="overflow: hidden;">
+    <div id="piechart"  style="width: 100%; height: 200px;"></div>
   </body>
 </html>

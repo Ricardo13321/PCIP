@@ -1,4 +1,11 @@
-<script type="text/javascript">
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
     function _init() {
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
@@ -41,4 +48,8 @@
   
   _init();
   </script>
+</head>
+<body style="overflow: hidden;">
 <div id="barchart_values" style="width: 100%; height: 600px;"></div>
+</body>
+</html>

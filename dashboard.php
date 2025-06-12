@@ -81,7 +81,7 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                                             <h6 class="text-truncate">TAXA DE REFUGO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <b><span><h1><?php echo $_SESSION['taxa_refugo']."%" ?></h1></span></b>
+                                            <b><span><h1 class="text-truncate"><?php echo $_SESSION['taxa_refugo']."%" ?></h1></span></b>
                                         </div>
                                     </div>
                                 </div>
@@ -147,12 +147,12 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                     <div class="col-xl-9">
                         <div class="row">
                             <div class="p-2 m-0 col-6">
-                                <div class="card shadow-lg">
+                                <div class="card shadow-lg mb-2">
                                     <div class="card-header">
                                         <h6>PERFORMANCE</h6>
                                     </div>
                                     <div class="card-body">
-                                        <?php include "graficos/graficoperformance.php" ?><hr>
+                                        <iframe src="graficos/graficoperformance.php" style="width: 100%;"></iframe>
                                     </div>
                                 </div>
                                 <div class="card shadow-lg">
@@ -160,7 +160,7 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                                         <h6>META SEMANAL</h6>
                                     </div>
                                     <div class="card-body">
-                                        <?php include "graficos/graficometa.php" ?>
+                                        <iframe src="graficos/graficolinha.php" style="height: 500px; width: 100%;"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -170,14 +170,10 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                                         <h6>PRODUÇÃO POR FUNCIONÁRIO</h6>
                                     </div>
                                     <div class="card-body">
-                                        <?php include "graficos/graficoprodfuncionarios.php" ?>
+                                        <iframe src="graficos/graficoprodfuncionarios.php" style="height: 600px; width: 100%;" frameborder="0"></iframe>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-2 m-0 col-6">
-                                
-                            </div>
-                            
                         </div>
                     </div>
                     <div class="col-xl-3">
@@ -216,7 +212,7 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                                             <h6>PRODUÇÃO</h6>
                                         </div>
                                         <div class="card-body">
-                                            <?php include "graficos/graficoproducao.php" ?>
+                                        <iframe src="graficos/graficoproducao.php" style="width: 100%; height: 200px;"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +224,7 @@ Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha
                                             <h6>RETRABALHO</h6>
                                         </div>
                                         <div class="card-body d-flex justify-content-center">
-                                            <?php include "graficos/graficoretrabalho.php" ?>
+                                            <iframe src="graficos/graficoretrabalho.php" style="width: 100%;"></iframe>
                                         </div>
                                     </div>
                                 </div>
