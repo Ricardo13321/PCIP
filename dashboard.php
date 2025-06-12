@@ -12,6 +12,12 @@ $datesplit = explode('/', $_SESSION['date'][0]);
 include('controle/formulas.php');
 ?>
 
+<!-- Dayli - 12/06
+
+Integração de uma Biblioteca de Gráficos (Chart.js): Inclusão da biblioteca Chart.js (ou similar) no projeto para a geração de gráficos.
+
+Gráfico de Linha da Taxa de Produção: Implementação de um gráfico de linha que exiba a evolução da taxa de produção ao longo do tempo (dentro do período filtrado, se houver).
+ -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

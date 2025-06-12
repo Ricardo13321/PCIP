@@ -23,7 +23,7 @@ for ($x=0; $x < 6; $x++) {
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Dia', 'Meta',       'Produção'],
+          ['Dia', 'Meta',       'Taxa de prdução'],
           ['Segunda',  1000,    <?php echo $count_sem[0] ?>],
           ['Terça',  1000,      <?php echo $count_sem[1] ?>],
           ['Quarta',  1000,     <?php echo $count_sem[2] ?>],

@@ -5,11 +5,7 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 ?>
-<!-- Dayli - 11/06
-
-Implementação de Ordenação da Tabela: Adição de funcionalidades (via PHP ou JavaScript) para permitir que o usuário ordene a tabela por diferentes colunas (data, quantidade produzida, taxa de produção, etc.).
-
-Paginação da Tabela (Básico): Implementação de uma paginação simples para dividir a tabela de dados em páginas menores, facilitando a visualização quando houver muitos registros. -->
+<!-- link para os botões customizados https://uiverse.io/buttons?page=1-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
