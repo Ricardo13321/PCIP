@@ -26,3 +26,4 @@
 Ref de pesquisa
 
 https://www.mco2.com.br/artigos/aprenda-tudo-sobre-htaccess-com-20-exemplos-praticos.html
+https://blog.desdelinux.net/pt/como-proteger-nossos-sites-usando-exemplos-de-htpasswd/
