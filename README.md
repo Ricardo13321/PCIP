@@ -22,4 +22,7 @@
 - dashboard admin
 - listagem diaria dos funcionários/cadastro de refugo e tempo de produção
 <img src="https://metricalist.com/wp-content/uploads/2023/04/Ecommerce%20Sales%20Dashboard.PNG">
-https://prod.liveshare.vsengsaas.visualstudio.com/join?A1593D0A9D1A4314C91850E74FF5AE238FB8
+
+Ref de pesquisa
+
+https://www.mco2.com.br/artigos/aprenda-tudo-sobre-htaccess-com-20-exemplos-praticos.html
