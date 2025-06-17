@@ -30,3 +30,4 @@ Ref de pesquisa
 - https://www.youtube.com/watch?v=YjNjpGZDZ4I
 - https://www.hostwinds.com/tutorials/what-is-a-htaccess-file
 - https://www.web2generators.com/apache-tools/htpasswd-generator#google_vignette
+- https://stackoverflow.com/questions/8722806/how-to-compare-two-dates-in-php
