@@ -122,7 +122,7 @@ pcip
 - 🪟 view onde guardamos os arquivos estruturais do nosso site, separamos em partes e juntamos tudo utilizando o nosso arquivo principal que seria o areausuario.php.
 - 📑 index é a nossa tela de login, mas caso o usuário já esteja autenticado ele será redirecionado para o areausuario.php.
 - ❌ erro.html é a nossa página que será apresentada caso aconteça um erro de requisição.
-- 📉 nodata.html é a página que aparece no lugar dos dados caso não exista dados para serem mostrados nos gráficos.
+- 📉 nodata.html é a página que aparece no lugar dos gráficos caso não exista dados para serem mostrados nos gráficos.
 - 🪶 .htaccess é o arquivo que adiciona algumas regras especiais para o nosso diretório, ele é responsável por redirecionar o usuário caso aconteça um erro de requisição ou algo do tipo. 
 Acho que isso é tudo que consegui pontuar sobre esse trabalho, pretendo refazer esse trabalho de uma forma mais adequada.
 ## Muito obrigado pela atenção 😸
